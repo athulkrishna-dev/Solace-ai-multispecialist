@@ -839,8 +839,29 @@ footer {
   .stats-strip { padding: 32px 20px; }
   .stat-item { padding: 16px 24px; }
   footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
-  .app-body { grid-template-columns: 1fr; }
-  .app-sidebar { display: none; }
+  .app-body { grid-template-columns: 1fr; grid-template-rows: 56px auto 1fr; }
+  .app-sidebar {
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    padding: 8px 14px;
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .app-sidebar::-webkit-scrollbar { display: none; }
+  .app-section-label { display: none; }
+  .app-role-btn { flex-shrink: 0; width: auto; margin-right: 8px; padding: 6px 12px; }
+  .app-role-meta { display: none; }
+  .app-sidebar-bottom { flex-direction: row; margin-top: 0; padding-left: 8px; border-left: 1px solid var(--glass-border); gap: 8px; flex-shrink: 0; }
+  .app-reset-btn { width: auto; flex-shrink: 0; padding: 6px 10px; }
+  .app-messages { padding: 16px 16px; gap: 12px; }
+  .app-input-area { padding: 12px 14px; gap: 8px; }
+  .app-msg-bubble { font-size: 14px; }
+  .app-textarea { font-size: 16px; } /* Prevents iOS auto-zoom */
+  .app-send-btn { padding: 0 16px; }
+  .app-panel-specs { grid-template-columns: 1fr; }
+  .app-spec-report { border-right: none; border-bottom: 1px solid var(--glass-border); }
+  .app-spec-report:last-child { border-bottom: none; }
 }
 </style>
 </head>
